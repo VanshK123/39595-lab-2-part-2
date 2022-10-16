@@ -110,6 +110,26 @@ void hash_map<K, V>::get_all_keys(K *keys)
 }
 
 template <typename K, typename V>
+void hash_map<K,V>::get_all_sorted_keys(K *keys){
+    int change = 0;
+    K temp = 0;
+    for(size_t i = 0; i<_capacity - 1; i++){
+        for(size_t j = 0; j < _capacity - 1 - i; j++){
+            if(keys[j] > keys[j+1]){
+                temp = keys[j];
+                keys[j] = keys[j+1];
+                keys[j+1] = temp;
+                change = 1;
+            }
+            if(change){
+                break;
+            }
+        }
+    }   
+}
+
+
+template <typename K, typename V>
 void hash_map<K, V>::get_bucket_sizes(size_t * buckets)
 {
     for (size_t i = 0; i < _capacity; i++)
@@ -123,10 +143,8 @@ hash_map<K, V>::~hash_map()
 {
     delete[] _head ;
 }
-template <typename K, typename V>
-void hash_map<K,V>::get_all_sorted_keys(K *keys){
 
+std::optional<size_t> hash_map::need_to_rehash(){
+    
 }
-
-
 
