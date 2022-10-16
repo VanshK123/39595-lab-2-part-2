@@ -1,0 +1,45 @@
+Trace file: trace_1
+Basic tests: passed
+
+Default constructor tests 
+Basic tests passed 
+Get bucket sizes passed 
+Get all keys passed
+
+score: 0
+Trace file: trace_2
+Basic tests: passed
+
+Default constructor tests 
+Basic tests passed 
+Get bucket sizes passed 
+Get all keys passed
+
+score: 0
+Trace file: trace_3
+Basic tests: passed
+
+Default constructor tests 
+Basic tests passed 
+Get bucket sizes passed 
+Get all keys passed
+
+score: 0
+Trace file: trace_4
+Basic tests: passed
+
+Default constructor tests 
+Basic tests passed 
+Get bucket sizes passed 
+Get all keys passed
+
+score: 0
+Trace file: trace_5
+Basic tests: passed
+
+Default constructor tests 
+Basic tests passed 
+Get bucket sizes passed 
+Get all keys passed
+
+score: 0
