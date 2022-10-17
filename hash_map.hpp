@@ -22,6 +22,7 @@ hash_map<K, V>::hash_map(size_t capacity, float upper_load_factor, float lower_l
     {
         _head[i] = hash_list<K, V>();
     }
+    
 }
 
 template <typename K, typename V>
@@ -144,7 +145,25 @@ hash_map<K, V>::~hash_map()
     delete[] _head ;
 }
 
-std::optional<size_t> hash_map::need_to_rehash(){
-    
-}
+ std::optional<size_t> hash_map::need_to_rehash(){
+        //expand
+        if(_size > _upper_load_factor * _capacity){
+            _capacity++;
+            rehash(_capacity);
+        }
+        //decrease
+        if(_size < _upper_load_factor * capacity){
+            _capacity--;
+            rehash(_capacity);
+        }
+ }
 
+template <typename K, typename V>
+ void hash_map::rehash(size_t new_capacity){
+    size_t = _capacity;
+    _capacity *= 2;
+    _upper_load_factor = _size * _capacity;
+    hash_list<K,V> *temp = _head;
+    _head = new hash_list<K,V>;
+    hash_map(new_capacity,upper_load_factor, lower_load_factor);
+ }
