@@ -160,10 +160,10 @@ hash_map<K, V>::~hash_map()
 
 template <typename K, typename V>
  void hash_map::rehash(size_t new_capacity){
-    size_t = _capacity;
-    _capacity *= 2;
-    _upper_load_factor = _size * _capacity;
-    hash_list<K,V> *temp = _head;
-    _head = new hash_list<K,V>;
+    //size_t = _capacity;
+    //_capacity *= 2;
+    //_upper_load_factor = _size * _capacity;
+  // hash_list<K,V> *temp = _head;
+    //_head = new hash_list<K,V>;
     hash_map(new_capacity,upper_load_factor, lower_load_factor);
  }
